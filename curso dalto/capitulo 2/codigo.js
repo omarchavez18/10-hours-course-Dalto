@@ -98,19 +98,57 @@ for (avion of animales) {
 //   password = prompt("esa no es tu contraseña, vuelve a intentarlo");
 // }
 
-//
-
+// function/parametros.
+//lo que se encuentra dentro de los () son los parametros.
 function sumar(num1, num2) {
   console.log(num1 + num2);
 }
-sumar(5, 8);
+sumar(5, 8); // el 5 y el 8 son parametros
 sumar(5, 100);
 sumar(47, 100);
+sumar(100, 100);
+
+// function/ restar
+function restar(num3, num4) {
+  document.write(num3 - num4);
+  document.write("<br>");
+}
+//aqui defines las variables dentro de los parametros.
+restar(175, 25);
+restar(100, 75);
 
 // function/ Return.
+
 function saludar() {
   console.log("hello my friend");
   return "whats up";
 }
 let saludo = saludar();
 console.log(saludo);
+
+//arrow function
+
+//function normal
+function saludar(nam) {
+  let saludo = `hola ${nam} como estas hoy?`;
+  console.log(saludo);
+}
+saludar("beto");
+saludar("omar");
+
+//arrow function
+//se quita la palabra function por un =>
+saludar = (nam) => {
+  let saludo = `hola ${nam} como estas hoy?`;
+  console.log(saludo);
+};
+saludar("beto");
+saludar("omar");
+
+// Arrow function example.
+hunting = (animal, animal2) => {
+  let hunter = `the species that I want to hunt are ${animal} and ${animal2} `;
+  console.log(hunter);
+};
+hunting("deers", "moose");
+hunting("turkeys", "goose");
