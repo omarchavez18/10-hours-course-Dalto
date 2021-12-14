@@ -85,8 +85,15 @@ for (avion in animales) {
 }
 
 // FOOR OF.
-//te muestra el valor d los elementos.
+//te muestra el valor de los elementos.
 
 for (avion of animales) {
   console.log(avion);
+}
+
+//
+
+let password = prompt("cual es tu contraseña?");
+while (password !== "chelsea") {
+  password = prompt("esa no es tu contraseña, vuelve a intentarlo");
 }
