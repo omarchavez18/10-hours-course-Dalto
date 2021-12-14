@@ -91,9 +91,26 @@ for (avion of animales) {
   console.log(avion);
 }
 
+// while loop
+
+// let password = prompt("cual es tu contraseña?");
+// while (password !== "chelsea") {
+//   password = prompt("esa no es tu contraseña, vuelve a intentarlo");
+// }
+
 //
 
-let password = prompt("cual es tu contraseña?");
-while (password !== "chelsea") {
-  password = prompt("esa no es tu contraseña, vuelve a intentarlo");
+function sumar(num1, num2) {
+  console.log(num1 + num2);
 }
+sumar(5, 8);
+sumar(5, 100);
+sumar(47, 100);
+
+// function/ Return.
+function saludar() {
+  console.log("hello my friend");
+  return "whats up";
+}
+let saludo = saludar();
+console.log(saludo);
