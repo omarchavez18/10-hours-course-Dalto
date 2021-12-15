@@ -94,3 +94,117 @@ if (dineroPedro >= 0.6 && dineroPedro < 1) {
 } else {
   console.log("pedro no te alcanza nada pobreton ");
 }
+
+/*EJERCICIO 2
+crear una maquina que deje pasar solo a los mayores de edad.
+la primer persona que entre despues de las 2 am , no paga*/
+let free = false;
+const validarCliente = (time) => {
+  let edad = prompt("cual es tu edad?");
+  if (edad >= 18) {
+    if (time >= 2 && time < 7 && free == false) {
+      alert(
+        "puedes pasar gratis porque eres las primer persona despues de las 2 AM"
+      );
+      free == true;
+    } else {
+      alert(
+        `son las ${time}:00Hs y puedes pasar, pero tienes que pagar la entrada`
+      );
+    }
+  } else {
+    alert("eres menor de edad, no puedes pasar");
+  }
+};
+validarCliente(23);
+validarCliente(24);
+validarCliente(2);
+validarCliente(3);
+
+//EJERCICIO 3
+//crear calculadora. con funciones
+
+const sumar = (num1, num2) => {
+  return parseInt(num1) + parseInt(num2);
+};
+
+const restar = (num1, num2) => {
+  return parseInt(num1) - parseInt(num2);
+};
+
+const multiplicar = (num1, num2) => {
+  return parseInt(num1) * parseInt(num2);
+};
+
+const dividir = (num1, num2) => {
+  return parseInt(num1) / parseInt(num2);
+};
+
+alert("que operacion deseas realizar?");
+let operacion = prompt("1: sumar, 2: restar, 3: multiplicar, 4: dividir");
+
+if (operacion == 1) {
+  let numero1 = prompt("primer numero para sumar");
+  let numero2 = prompt("segundo numero para sumar");
+  resultado = sumar(numero1, numero2);
+  alert(`tu resultado es ${resultado}`);
+}
+if (operacion == 2) {
+  let numero1 = prompt("primer numero para restar");
+  let numero2 = prompt("segundo numero para restar");
+  resultado = restar(numero1, numero2);
+  alert(`tu resultado es ${resultado}`);
+}
+if (operacion == 3) {
+  let numero1 = prompt("primer numero para multiplicar");
+  let numero2 = prompt("segundo numero para multiplicar");
+  resultado = multiplicar(numero1, numero2);
+  alert(`tu resultado es ${resultado}`);
+}
+if (operacion == 4) {
+  let numero1 = prompt("primer numero para dividir");
+  let numero2 = prompt("segundo numero para dividir");
+  resultado = dividir(numero1, numero2);
+  alert(`tu resultado es ${resultado}`);
+} else {
+  alert("no se encuentra esa funcion");
+}
+
+/*EJERCICIO 4 NO FUNCIONA
+crea un mini sistema que nos permita registrar los alumnos que esten presentes (P) y ausentes (A) en clase.
+pasados los 30 dias mostrar la situacion final de todos los alumnos (# total de presentes y ausentes).
+se puede tener un maximo de 10% de ausencias por semestre, si tienen mas sera reprobado. */
+
+let cantidad = prompt("cuantos alumnos son?");
+let alumnosTotales = [];
+
+for (i = 0; i < cantidad; i++) {
+  alumnosTotales[i] = [prompt("nombre del alumno " + (i + 1)), 0]; // el 0 es la cantidad de asistencias.
+}
+
+const tomarAsistencia = (nombre, p) => {
+  let presencia = prompt(nombre);
+  if (presencia == "p" || presencia == "P") {
+    alumnosTotales[p][1]++;
+  }
+};
+
+for (i = 0; i < 30; i++) {
+  for (alumno in alumnosTotales) {
+    tomarAsistencia(alumnosTotales[alumno][0], alumno);
+  }
+}
+
+for (alumno in alumnosTotales) {
+  let resultado = `${alumnosTotales[alumno][0]}:<br>
+  ________Presentes: ${alumnosTotales[alumno][1]} <br> 
+  ________Ausencias: ${30 - alumnosTotales[alumno][1]}`;
+  if (30 - alumnosTotales[alumno][1] > 18) {
+    resultado += "REPROBADO POR INASISTENCIAS <br>";
+  } else {
+    resultado += "<br></br>";
+  }
+}
+
+document.write(resultado);
+// NO FUNCIONA EL EJERCICIO DE ARRIBA
