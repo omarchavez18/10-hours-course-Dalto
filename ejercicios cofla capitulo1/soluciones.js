@@ -207,4 +207,4 @@ for (alumno in alumnosTotales) {
 }
 
 document.write(resultado);
-// NO FUNCIONA EL EJERCICIO DE ARRIBA
+// NO FUNCIONA EL EJERCICIO DE ARRIBA. no se que esta mal
