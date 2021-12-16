@@ -10,7 +10,14 @@ class animal {
   //se crea un metodo. los metodos son funciones que se crean dentro de las clases.
   // con este metodo nos evitamos el codigo de la linea 30 y se aplica lo de la 32-34.
   verInfo() {
-    document.write(this.info + "<br>");
+    document.write(this.info + "<br>" + "<br>");
+  }
+  ladrar() {
+    if (this.especie == "perro") {
+      document.write(`soy un ${this.especie} y ladro asi waaw waaw` + "<br>");
+    } else {
+      document.write(`no puede ladrar porque es un ${this.especie}` + "<br>");
+    }
   }
 }
 
@@ -32,3 +39,7 @@ console.log(perro.especie);
 perro.verInfo();
 gato.verInfo();
 zorro.verInfo();
+//
+perro.ladrar();
+gato.ladrar();
+zorro.ladrar();
