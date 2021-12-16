@@ -7,6 +7,11 @@ class animal {
     this.color = color;
     this.info = `Soy un ${this.especie} tengo ${this.age} años y soy de color ${this.color}.`;
   }
+  //se crea un metodo. los metodos son funciones que se crean dentro de las clases.
+  // con este metodo nos evitamos el codigo de la linea 30 y se aplica lo de la 32-34.
+  verInfo() {
+    document.write(this.info + "<br>");
+  }
 }
 
 /* el "new" nos indica que se esta creando un objeto de la clase animal.
@@ -18,6 +23,12 @@ const zorro = new animal("zorro", "2", "rojo");
 console.log(perro);
 console.log(gato);
 console.log(zorro);
-
 console.log(zorro.color);
-console.log(gato.info);
+console.log(gato.age);
+console.log(perro.especie);
+
+// console.log(gato.info);
+//aqui se aplica el metodo de la linea 12 a 14.
+perro.verInfo();
+gato.verInfo();
+zorro.verInfo();
