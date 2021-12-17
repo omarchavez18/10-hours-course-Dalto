@@ -39,7 +39,7 @@ class Perro extends Animal {
     document.write(this.infor + "<br>" + "<br>");
   }
 
-  ladrar() {
+  static ladrar() {
     alert("waw");
   }
 }
@@ -75,7 +75,7 @@ gato.verInfo();
 zorro.verInfo();
 
 //esto es polimorfismo
-perro.ladrar();
+Perro.ladrar();
 // gato.ladrar();
 // zorro.ladrar();
 
