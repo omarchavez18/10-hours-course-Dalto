@@ -76,6 +76,7 @@ zorro.verInfo();
 
 //esto es polimorfismo
 Perro.ladrar();
+
 // gato.ladrar();
 // zorro.ladrar();
 
