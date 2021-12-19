@@ -298,7 +298,7 @@ for (alumno in alumnosTotales) {
     ________Presentes: ${alumnosTotales[alumno][1]} <br>
     ________Ausencias: ${5 - alumnosTotales[alumno][1]}`;
   if (5 - alumnosTotales[alumno][1] > 2) {
-    resultado += " REPROBADO POR INASISTENCIAS <br>";
+    resultado += " REPOBADO POR INASISTENCIAS <br>";
   } else {
     resultado += "<br></br>";
   }
