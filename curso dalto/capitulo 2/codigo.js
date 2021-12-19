@@ -25,14 +25,6 @@ console.log(ram);
 
 //
 
-// let password = prompt("cual es tu contraseña");
-
-// if (password === "superguapo123") {
-//   alert("acesso concedido");
-// } else {
-//   prompt("esa no es tu contraseña, vuelve a intentarlo");
-// }
-
 //for loop
 
 for (let i = 1; i <= 10; i++) {
@@ -110,8 +102,7 @@ sumar(100, 100);
 
 // function/ restar
 function restar(num3, num4) {
-  document.write(num3 - num4);
-  document.write("<br>");
+  console.log(num3 - num4);
 }
 //aqui defines las variables dentro de los parametros.
 restar(175, 25);
