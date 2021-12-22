@@ -126,3 +126,12 @@ console.log(array3);
 /*forEach() - ejecuta la funcion indicada una vez por cada elemento del array */
 
 array2.forEach((element) => console.log(element));
+
+// map() retorna un nuevo array con accion de alguna funcion previa
+
+let numeros = [10, 20, 45, 15, 5];
+let numerosMap = numeros.map(multiplicar);
+function multiplicar(num) {
+  return num * 2;
+}
+console.log(numerosMap);
