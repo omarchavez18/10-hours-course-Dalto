@@ -60,4 +60,69 @@ console.log(resultado);
 // length() nos indica cuantos caracteres tiene nuestro string.
 console.log(resultado.length);
 
-// METODOS DE ARRAYS.
+// METODOS DE ARRAYS/ METODOS TRANSFORMADORES.
+
+let arrayNombres = ["pedro", "maria", "jorge"];
+
+// pop() elimina el ultimo elemento de un array y lo devuelve
+let result = arrayNombres.pop();
+console.log(result);
+console.log(arrayNombres); // aqui aparece el array con el elemento "jorge" ya eliminado.
+
+//shift() elimina el primer elemento de un array y lo devuelve
+let resulta = arrayNombres.shift();
+console.log(resulta);
+console.log(arrayNombres); // como el en array solo quedaban 2 nombres ahora solo muestra 1
+
+//push() agrega un elemento al array al final de la lista
+arrayNombres.push("omar", "eduardo", "daniel");
+console.log(arrayNombres);
+
+// reverse() invierte el orden de los elementos de un array.
+arrayNombres.reverse();
+console.log(arrayNombres);
+
+// unshift() agrega 1 o mas elementos al inicio del array y devuelve la nueva longitud del array
+newArray = arrayNombres.unshift("lalo", "meño");
+console.log(arrayNombres);
+console.log(newArray);
+
+/* sort() ordena los elementos de un array localmente y devuelve el array ordenado.
+ se basa en el orden numerico 1,2,3 etc y en en texto en orden alfabetico*/
+arrayNombres.sort();
+console.log(arrayNombres);
+
+/* splice()  sirve para eliminar elementos del array especificando donde empiezas y donde terminas
+osea  cuantos elementos segun su posicion y/o puede agregar elementos
+dentro del parentesis lo primero es desde donde emepezaras a trabajar, en que posicion del array
+luego cuantos deseas eliminar y si no deseas eliminar se pone 0, luego los que deseas agregar
+arrayNombres.splice(2,0,"nacho", "claguas") */
+
+arrayNombres.splice(1, 3, "chimo", "beto", "bishu");
+// aqui le indica que empieze en la posicion 1 y elimine 3 elementos y agrega 2 elementos en su lugar
+console.log(arrayNombres);
+
+//METODOS ACCESORES.
+/* join() une todos los elementos de una matriz (u objeto similar) en una cadena y la devuelve,
+lo convierte el array en un string, y se le puede agregar un separador declarado dentro del parentesis */
+let resultadoJoin = arrayNombres.join(" / ");
+console.log("elemento: " + resultadoJoin);
+
+/*slice() crea un nuevo array tomando elementos de otro array, especificando cuales sin contar el ultimo
+ejemplo abajo empieza en la posicion 1 y cuenta hasta la posicion 3 sin agregar el de la posicion 3,
+para agregar todos los elementos despues de la posicion de inicio solo seria dejarlo vacio*/
+let arraySlice = arrayNombres.slice(1, 3);
+console.log(arraySlice);
+
+//METODOS DE REPETICION.
+
+/* filter() crea un nuevo array con todos los elementos que cumplan la condicion, es un loop,
+se le declaran funciones para compluir con las condiciones*/
+let array2 = ["abecedario", "manzana", "pedro", "dedo", "bobo", "pedro"];
+
+let array3 = array2.filter((arra) => arra.length > 5);
+console.log(array3);
+
+/*forEach() - ejecuta la funcion indicada una vez por cada elemento del array */
+
+array2.forEach((element) => console.log(element));
