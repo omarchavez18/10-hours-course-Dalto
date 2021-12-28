@@ -1,4 +1,5 @@
-/* termino el primer semestre y cofla no sabe si aprobara las materias, para pasar debe contar 
+/* EJERCICIO 7
+ termino el primer semestre y cofla no sabe si aprobara las materias, para pasar debe contar 
 con al menos el 90% de asistencia,
 el promedio por materias debe ser al menos 7/10,
 debe tener al menos el 75% de los trabajos practicos entregados.
@@ -52,3 +53,48 @@ const aprobo = () => {
 };
 
 aprobo();
+
+/* EJERCICIO 7-B. 
+cofla esta sufriendo un poco ya que a pesar de que cree contar con el 90% de asistencias
+y tener un promedio mayor a 7/10, no cree entregar el 75% de los trabajos practicos ya que necesita
+dividir las tareas que hara semanalmente, cofla debe, trabajar 8 horas por dia durante 2 semanas,
+entre las cuales tiene que: 24 horas estudiar, 24 horas hacer trabajos practicos, 
+56 horas de trabajar, 8 horas de hacer las cosas de la casa.
+
+organizar las actividades diariamente.
+utilizar la consola para organizar todo.
+el tiempo por tarea no debe superar las 4 horas*/
+
+/*
+30 min las cosas de la casa
+ 100 min trabajos practicos
+ 10 min descanso
+ 100 min estudiar
+ 240 min trabajar */
+
+let trabajo = "240 min por dia de trabajo";
+let estudio = "100 min por dia de estudio";
+let tp = "100 min por dia de trabajos practicos";
+let homework = "30 min por dia de cosas de la casa";
+let descanso = "10 min por dia de descanso";
+
+for (let i = 0; i < 14; i++) {
+  if (i == 0) {
+    console.group("semana 1");
+  }
+  console.groupCollapsed("dia " + (i + 1));
+  console.log(trabajo);
+  console.log(descanso);
+  console.log(estudio);
+  console.log(tp);
+  console.log(homework);
+  console.groupEnd();
+  console.count();
+  if (i == 7) {
+    console.groupEnd();
+    console.groupCollapsed("semana 2");
+  }
+}
+
+console.groupEnd();
+console.groupEnd();
