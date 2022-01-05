@@ -62,6 +62,7 @@ console.log(`el value es ${naame.value}`);
 /*add(), remove(), contains(), replace(), item(), toggle() */
 //add() agrega una clase.
 let buceo = document.querySelector(".buceo");
+buceo.setAttribute("dir", "rtl");
 buceo.classList.add("diving");
 buceo.classList.add("diver");
 
