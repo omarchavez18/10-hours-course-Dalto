@@ -23,7 +23,7 @@ resultado = string2.includes("hielo");
 console.log(resultado);
 
 //repeat() nos permite repetir el string el # de veces que le indiquemos.
-resultado = string2.repeat(3);
+resultado = string2.repeat(2);
 console.log(resultado);
 
 //indexOf() nos indica la posicion  en base al caracter asignado

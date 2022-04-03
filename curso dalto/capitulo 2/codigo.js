@@ -68,7 +68,7 @@ for (let index = 1; index <= 6; index++) {
   console.log(index);
 }
 
-// FOOR IN.
+// FOR IN.
 // muestra la posicion en la que se encuntra los elementos.
 
 let animales = ["gato", "perro", "oso"];
@@ -76,7 +76,7 @@ for (avion in animales) {
   console.log(avion);
 }
 
-// FOOR OF.
+// FOR OF.
 //te muestra el valor de los elementos.
 
 for (avion of animales) {
@@ -95,7 +95,7 @@ for (avion of animales) {
 function sumar(num1, num2) {
   console.log(num1 + num2);
 }
-sumar(5, 8); // el 5 y el 8 son parametros
+sumar(5, 8); // el 5 y el 8 son argumentos
 sumar(5, 100);
 sumar(47, 100);
 sumar(100, 100);
